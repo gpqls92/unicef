@@ -1,0 +1,666 @@
+// @import '_common.scss';
+// @import '_mixin.scss';
+
+body{ 
+    overflow: hidden; 
+    margin: 0; 
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #fff;
+
+    .fix{
+        position: fixed;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        border: 14px solid #fff;
+        z-index: 9998;
+        pointer-events: none;
+        .logo img{
+            position:absolute;
+            top:5%;
+            left:3%;
+            display: block;
+            pointer-events: auto;
+        }
+        aside{
+            position: fixed; 
+            left: 4%;top: 50%;
+            transform: translateY(-50%);
+            z-index: 9999;
+            a{
+                display: block;
+                width: 8px;height: 8px; 
+                border-radius: 100%;
+                background-color: #ddd;
+                margin: 20px 0; 
+                pointer-events:auto;
+                cursor: pointer;
+            }
+            a.active{background-color: rgb(185, 52, 29);}
+        }
+        .left_under .earth img{
+            position: absolute;
+            padding-bottom: 14px;
+            width: 43px;
+            height: 43px;
+            bottom: 15%;
+            left: 3%;
+        }
+        .left_under .earth_1{
+            position: absolute;
+            bottom: 12%;
+            left: 3%;
+            font-size: 0.8rem;
+        }
+        .left_under .earth_2{
+            position: absolute;
+            bottom: 11%;
+            left: 3%;
+            font-size: 0.5rem;
+        }
+        .left_under .earth_3{
+            position: absolute;
+            bottom: 4%;
+            left: 3%;
+            padding-top: 8px;
+            border-top: 1px solid #fefffd;
+        }
+        .support{
+            padding: 10px 0 0 0;
+            left: 83%;
+            bottom: 6%;
+            position: absolute;
+            letter-spacing: 5px;
+            font-size: 1rem;
+            font-weight: bold;
+            width: 15%;
+            height: 5%;
+            text-align: center;
+            background: url("../img/drough_1/btn_bg01.png") no-repeat center bottom;
+            a{
+                color: #fefffd;
+                text-decoration: none;
+                pointer-events: auto;
+            }
+        }
+    }
+
+
+    main{
+        section{
+            overflow: hidden;
+            position: relative;
+            padding: 10px;
+            width: 100%; height: 100%;
+            color: #ddd;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition:0.5s;
+        }
+            .section1{
+                display: block;
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: url("../img/drough_1/main_banner01.jpg") no-repeat center bottom;
+                background-size: cover;
+                z-index: 10;
+                text-align: center;
+                .arrow{
+                    font-weight: bold;
+                    display: flex;
+                    flex-direction: column;
+                    position: absolute;
+                    bottom: 6%;
+                    left: 45%;
+                    width: 150px;
+                    height: 100px;
+                    background: url("../img/drough_1/naxt_arrow.png") no-repeat center bottom;
+                    animation: arrow 1.3s infinite alternate;
+                }
+                    @keyframes arrow{    
+                        from{ transform: translateY(0%); }  
+                        to{ transform: translateY(-30%); }  
+                    }
+                .s1_img{
+                    font-size: 0.93rem;
+                    text-align: center;
+                    transform: translate(0%,58%);
+                
+                    p{
+                        font-size: 0.93rem;
+                        font-weight: 400;
+                        text-align: center;
+                        padding-top: 10px;
+                        font-weight: bold;
+                        color: #ffffff;
+                    }
+                }
+            }
+            .section2{
+                display: block;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background-color: #6f6860;
+                z-index: 20;
+                .left_wrap{
+                    background: url("../img/drough_1/main_banner02.jpg") center center/cover no-repeat;
+                    float: left;
+                    width: 50%;
+                    height: 100%;
+                    .s2_img0{
+                        position: relative;
+                        top: 88%;
+                        right: 14px;
+                        text-align: right;
+                        .s2_p1{
+                            font-weight: 400;
+                            font-size: 0.8rem;
+                            color: #fff;
+                            opacity: .8;
+                        }
+                        .s2_p2{
+                            padding-top: 2px;
+                            font-weight: 400;
+                            font-size: 0.85rem;
+                            color: #ffffff;
+                            opacity: 0.6;
+                        }
+                    }
+                }
+                .s2_img_p{
+                    position: relative;
+                    float: left;
+                    width: 50%;
+                    height: 100%;
+                    .s2_img1{
+                        position: relative;
+                        top: 50%;
+                        left: 0;
+                        max-width: 75%;
+                        overflow: hidden;
+                        overflow-y: auto;
+                        padding-left: 16%;
+                        margin-right: 10%;
+                        margin-top: -280px;
+                        z-index: 500;
+                        .s2_img1-1{
+                            overflow: hidden;
+                            padding-bottom: 42px;
+                        }
+                        .text_img1-1{
+                            color: #d2c7bb;
+                            line-height: 45px;
+                            font-size: 1.6rem;
+                            font-weight: 600;
+                            margin: 10px 0;
+                            span{
+                                color: #fff;
+                            }
+                        }
+                    }
+                    .s2_p2{
+                        color: #d2c7bb;
+                        line-height: 20px;
+                        padding-top: 17px;
+                        font-weight: 400;
+                        font-size: 0.9rem;
+                    }
+                    .s2_p3{
+                        color: #aca59c;
+                        padding-top: 5px;
+                        font-weight: 300;
+                        font-size: 0.6rem;
+                    }
+                    .s2_img2{
+                        max-width: 383px;
+                        width: 100%;
+                        margin-top: 34px;
+                        img{
+                            width: 100%;
+                        }
+                    }
+                }
+            }  
+            .section3{
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background-color: #4d3f3f;
+                z-index: 30;
+                .left_wrap3{
+                    background: url("../img/drough_1/main_banner03.jpg") center center/cover no-repeat;
+                    float: left;
+                    width: 50%;
+                    height: 100%;
+                    .s3_img0{
+                        position: relative;
+                        top: 88%;
+                        right: 14px;
+                        text-align: right;
+                        .s3_p1{
+                            font-weight: 400;
+                            font-size: 0.8rem;
+                            color: #fff;
+                            opacity: .8;
+                        }
+                        .s3_p2{
+                            padding-top: 2px;
+                            font-weight: 400;
+                            font-size: 0.85rem;
+                            color: #ffffff;
+                            opacity: 0.6;
+                        }
+                    }
+                }
+                .s3_img_p{
+                    position: relative;
+                    float: left;
+                    width: 50%;
+                    height: 100%;
+                    .s3_img1{
+                        position: relative;
+                        top: 50%;
+                        left: 0;
+                        max-width: 75%;
+                        overflow: hidden;
+                        overflow-y: auto;
+                        padding-left: 16%;
+                        margin-right: 10%;
+                        margin-top: -320px;
+                        z-index: 510;
+                        .s3_img1-1{
+                            overflow: hidden;
+                            padding-bottom: 42px;
+                        }
+                        .text2_img1-1{
+                            color: #c0a3a3;
+                            line-height: 45px;
+                            font-size: 1.6rem;
+                            font-weight: 600;
+                            margin: 10px 0;
+                            span{
+                                color: #fff;
+                            }
+                        }
+                    }
+                    .s3_p2{
+                        color: #d2c7bb;
+                        line-height: 20px;
+                        padding-top: 17px;
+                        font-weight: 400;
+                        font-size: 0.9rem;
+                    }
+
+                    .s3_img2{
+                        float: left;
+                        max-width: 252px;
+                        width: 100%;
+                        margin-top: 20px;
+                    
+                        dl{
+                            overflow: hidden;
+                            height: 71px;
+                            padding-left: 94px;
+                            background: url(../img/drough_1/text_set03_img01.png) no-repeat 0 0;
+                            dt{
+                                padding-top: 7px;
+                                padding-bottom: 5px;
+                                font-weight: 300;
+                                font-size: 0.5rem;
+                                color: #fff;
+                                dd{
+                                    line-height: 15px;
+                                    font-weight: 300;
+                                    font-size: 0.5rem;
+                                    color: #c0a3a3;
+                                }
+                            }
+                        }
+                    }
+                    .s3_img3{
+                        max-width: 252px;
+                        width: 100%;
+                        margin-top: 34px;
+                    
+                        dl{
+                            overflow: hidden;
+                            height: 71px;
+                            padding-left: 94px;
+                            background: url(../img/drough_1/text_set03_img02.png) no-repeat 0 0;
+                            dt{
+                                padding-top: 7px;
+                                padding-bottom: 5px;
+                                font-weight: 300;
+                                font-size: 0.5rem;
+                                color: #fff;
+                                dd{
+                                    line-height: 15px;
+                                    font-weight: 300;
+                                    font-size: 0.5rem;
+                                    color: #c0a3a3;
+                                }
+                            }
+                        }
+                    }
+                }
+            }  
+            .section4{
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background-color: #584e49;
+                z-index: 40;
+                .left_wrap4{
+                    background: url("../img/drough_1/main_banner04.jpg") center center/cover no-repeat;
+                    float: left;
+                    width: 50%;
+                    height: 100%;
+                    .s4_img0{
+                        position: relative;
+                        top: 88%;
+                        right: 14px;
+                        text-align: right;
+                        .s4_p1{
+                            font-weight: 400;
+                            font-size: 0.8rem;
+                            color: #fff;
+                            opacity: .8;
+                        }
+                        .s4_p2{
+                            padding-top: 2px;
+                            font-weight: 400;
+                            font-size: 0.85rem;
+                            color: #ffffff;
+                            opacity: 0.6;
+                        }
+                    }
+                }
+                .s4_img_p{
+                    position: relative;
+                    float: left;
+                    width: 50%;
+                    height: 100%;
+                    .s4_img1{
+                        position: relative;
+                        top: 50%;
+                        left: 0;
+                        max-width: 75%;
+                        overflow: hidden;
+                        overflow-y: auto;
+                        padding-left: 16%;
+                        margin-right: 10%;
+                        margin-top: -270px;
+                        z-index: 510;
+                        .s4_img1-1{
+                            overflow: hidden;
+                            padding-bottom: 42px;
+                        }
+                        .text3_img1-1{
+                            color: #CBBAB2;
+                            line-height: 45px;
+                            font-size: 1.6rem;
+                            font-weight: 600;
+                            margin: 10px 0;
+                            span{
+                                color: #fff;
+                            }
+                        }
+                    }
+                    .s4_p2{
+                        color: #CBBAB2;
+                        line-height: 20px;
+                        padding-top: 17px;
+                        font-weight: 400;
+                        font-size: 0.9rem;
+                    }
+
+                    .s4_img2{
+                        float: left;
+                        max-width: 252px;
+                        width: 100%;
+                        margin-top: 20px;
+                    
+                        dl{
+                            overflow: hidden;
+                            height: 71px;
+                            padding-left: 94px;
+                            background: url(../img/drough_1/text_set02_img01.png) no-repeat 0 0;
+                            dt{
+                                font-weight: 300;
+                                font-size: 0.5rem;
+                                color: #fff;
+                            }
+                        }
+                    }
+                }
+            } 
+            .section5{
+                background: url("../img/drough_1/main_banner05.jpg");
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                z-index: 50;
+                .section5_p{
+                    position: absolute;
+                    display: block;
+                    position: absolute;
+                    // top: 50%;
+                    right: 8%;
+                    line-height: 60px;
+                    font-weight: 600;
+                    font-size: 2.5rem;
+                    color: #fff;
+                    animation: fadein 3s forwards;
+                    @keyframes fadein {
+                        from {opacity: 0;}
+                        to {opacity: 1;}
+                    }
+                }
+            } 
+            .section6{
+                display: block;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                z-index: 60;
+                .left_wrap6{
+                    float: left;
+                    width: 57%;
+                    height: 100%;
+                    overflow: hidden;
+                    .s6{
+                        // background-size: cover;
+                        width: 100%;
+                        height: 100%;
+                        .s6_slide{
+                            overflow: hidden;
+                            figure{
+                                
+                                margin: 0;
+                                // width: 100%;
+                                // height: 100%;
+                                display:flex;
+                                transition: 1s;
+                                img{
+                                    flex-shrink: 0;
+                                }
+                            }
+                        }
+                        .s6_btn{
+                            display: none;
+                        }
+                    }
+                    .s6_img0{
+                        position: absolute;
+                        top: 40%;
+                        left: 15%;
+                        text-align: right;
+                        z-index: 400;
+                        .s6_p1{
+                            font-weight: 600;
+                            font-size: 2.5rem;
+                            color: #fff;
+                        }
+                    }
+                }
+                .s6_img_p{
+                    background-color: #06527e;
+                    float: left;
+                    width: 43%;
+                    height: 100%;
+                    .s6_img1{
+                        position: absolute;
+                        top: 50%;
+                        left: 55%;
+                        overflow: hidden;
+                        width: 40%;
+                        height: 700px;
+                        z-index: 400;
+                        margin-top: -280px;
+                        ul{
+                            overflow: hidden;
+                            width: 100%;
+                            li{
+                                list-style: none;
+                                margin-left: 4.6%;
+                                width: 90%;
+                                margin-bottom: 1%;
+                                dl{
+                                    overflow: hidden;
+                                    margin: 0;
+                                    padding: 0 30px;
+                                    z-index: 400;
+                                    dt{
+                                        margin: 0;
+                                        padding-bottom: 14px;
+                                        font-weight: 600;
+                                        font-size: 1.1rem;
+                                        color: #fff;
+                                    }
+                                    dd{
+                                        width: 100%;
+                                        line-height: 20px;
+                                        font-weight: 300;
+                                        font-size: 0.9rem;
+                                        color: #fff;
+                                        margin: 0 5px;
+                                    }
+                                }
+                                .txt1{
+                                    padding-bottom: 5%;
+                                    background: url("../img/drough_1/section06_txtBgL01.png") no-repeat 0 3px;
+                                }
+                                .txt2{
+                                    padding-bottom: 5%;
+                                    background: url("../img/drough_1/section06_txtBgL02.png") no-repeat 0 3px;
+                                }
+                                .txt3{
+                                    padding-bottom: 5%;
+                                    background: url("../img/drough_1/section06_txtBgL03.png") no-repeat 0 3px;
+                                }
+                                .txt4{
+                                    padding-bottom: 5%;
+                                    background: url("../img/drough_1/section06_txtBgL04.png") no-repeat 0 3px;
+                                }
+                            }
+                        }
+                    }
+                }
+            } 
+            .section7{
+                background: url("../img/drough_1/main_banner07.jpg") center center/ cover no-repeat;
+                display: block;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                z-index: 60;
+                text-align: center;
+                .s7_1{
+                    position: absolute;
+                    top: 25%;
+                    left: 0;
+                    width: 100%;
+                    text-align: center;
+                    z-index: 401;
+                    .tit{
+                        padding-bottom: 17px;
+                        line-height: 60px;
+                        font-weight: 600;
+                        font-size: 46px;
+                        color: #fff;
+                    }
+                .s7_menu{
+                    position: relative;
+                    transform: translateX(45%);
+                    bottom: 52px;
+                    right: 62px;
+                    z-index: 401;
+                    ul{
+                        overflow: hidden;
+                        vertical-align: middle;
+                        align-items: center;
+                        li{
+                            list-style: none;
+                            padding-bottom: 15px;
+                            background: url(../img/drough_1/section07_menuBgB.png) no-repeat left bottom;
+                            text-align: left;
+                            a{
+                            text-decoration: none;
+                            color: #fff;
+                            display: block;
+                            margin: 0 auto;
+                            margin-top: 36px;
+                            font-size: 0.8rem;
+                            font-weight: 600;
+                            cursor: pointer;
+                                span{
+                                    font-weight: 400;
+                                    font-size: 10px;
+                                }
+                            }
+                        }
+                    }
+                }
+                    .s7_video{
+                        position: relative;
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 100%;
+                        z-index: 99;
+                        video{
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                            min-width: 100%;
+                            min-height: 100%;
+                            width: auto;
+                            height: auto;
+                            z-index: 100;
+                            
+                        }
+                    }
+                
+                }
+            }  
+        }     
+}
