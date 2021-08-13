@@ -4,7 +4,7 @@ window.addEventListener('DOMContentLoaded',function(){
     const pnindicato = document.querySelectorAll('.fix aside a');
 
     let idx = 0, delta,inter,pos;
-  
+
 
     function slide2(){
         console.log(idx)
@@ -39,21 +39,6 @@ window.addEventListener('DOMContentLoaded',function(){
         update();
     })
 
-// //wheel end
-// function ani(){
-// $('html,body').animate({
-//     scrollTop : $(window).height() * num
-// });
-
-// $('aside a').removeClass('active');
-// $('aside a').eq(num).addClass('active');
-// }
-
-// $('aside a').on('click',function(){
-// num = $(this).index();
-// ani();
-// })
-
 
 $('main section').on('mousewheel',function(e){
     delta = e.originalEvent.wheelDelta;
@@ -81,48 +66,6 @@ $('main section').on('mousewheel',function(e){
 
 
 
-// const colorArr = ["transparent","gray"];
-// const elBtn = document.querySelector(".fix .support a");
-
-//     let num = 0;
-//     elBtn[num].style.background = colorArr[0];
-//     function aaa(){
-
-//     }
-    
-//     for(let i = 0; i < tabBtn.length; i++){ 
-//         elBtn[i].addEventListener("click", () => {
-//             //버튼 active 클래스 넣기
-//             elBtn[num].classList.remove("active");
-
-//             //탭, 메뉴 배경색 변경
-//             elBtn[num].style.background = colorArr[2];
-
-//             num = i;
-
-//             elBtn[i].style.backgroundColor = colorArr[i];
-//             elBtn[i].classList.add("active");
-//         });
-//     }
-
-//     for(let i = 0; i < tabBtn.length; i++){
-//         elBtn[i].addEventListener("mouseenter", () => {
-//             if(elBtn[i].classList != "active"){
-//                 elBtn[i].style.background = colorArr[gray];
-//             }
-//         });
-//     }
-    
-//     for(let i = 0; i < tabBtn.length; i++){
-//         tabBtn[i].addEventListener("mouseleave", () => {
-//             if(tabBtn[i].classList != "active"){
-//                 tabBtn[i].style.background = colorArr[transparent];
-//             }
-//         });
-//     }
-
-
-
     const elBurger = document.querySelector('.menu-trigger');
     const elNav = document.querySelector('.menu nav');
     elBurger.addEventListener('click',function(){
@@ -132,6 +75,48 @@ $('main section').on('mousewheel',function(e){
 
 
 
+
+    const elFigure = document.querySelector('.section6 .left_wrap6 .s6 figure');
+    const pnBtn = document.querySelectorAll('.section6 .left_wrap6 .s6 button');
+
+    let sIdx = 0;
+    for(let i=0;i<pnBtn.length;i++){
+        pnBtn[i].addEventListener('click',function(){
+            if(i==1){
+                if(sIdx < 3) sIdx++;
+            }else{
+                if(sIdx > 0) sIdx--;
+            }
+            slide();
+        });
+    }
+
+    function slide(){
+        elFigure.style=`transform:translateX(${-100*sIdx}%)`;
+    }
+    
+    let loop;
+    function interval(){
+        loop = setInterval(function(){
+                        if(sIdx < 3){
+                            sIdx++;
+                        }else{
+                            sIdx=0;
+                        }
+                        slide();
+                    },2000);
+    }
+    interval();
+    
+    const elSlide = document.querySelector('.s6_slide')
+    elSlide.addEventListener('mouseenter',function(){
+        clearInterval(loop);
+    });
+
+    elSlide.addEventListener('mouseleave',function(){
+        console.log('sss')
+        interval();
+    });
 
 
 

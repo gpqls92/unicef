@@ -6,14 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <meta property="og:title" content="유니세프 기후변화 캠페인-미세먼지">
-    <meta property="og:url" content="https://gpqls92.github.io/unicef/">
-    <meta property="og:image" content="./img/air_3/main_banner01.jpg">
+    <meta property="og:url" content="https://gpqls92.github.io/unicef/air_3.html">
+    <meta property="og:image" content="./img/air_3/main_banner01-1.jpg">
     <meta property="og:description" content="기후변화로 발생하는 자연재해. 어린이들은 내일 더 심각한 미세먼지를 견뎌야 합니다.">
 
     <meta name="twitter:card" content="summary">
     <meta name="twitter:title" content="유니세프 캠페인-미세먼지">
-    <meta name="twitter:url" content="https://gpqls92.github.io/unicef/">
-    <meta name="twitter:image" content="./img/air_3/main_banner01.jpg">
+    <meta name="twitter:url" content="https://gpqls92.github.io/unicef/air_3.html">
+    <meta name="twitter:image" content="./img/air_3/main_banner01-1.jpg">
     <meta name="twitter:description" content="기후변화로 발생하는 자연재해. 어린이들은 내일 더 심각한 미세먼지를 견뎌야 합니다.">
     <title>[유니세프 기후변화 캠페인]미세먼지</title>
 
@@ -56,7 +56,7 @@
             </a>
             <nav>
                 <p class="p1">미세먼지, 그리고 내일</p>
-                <a href="./drough_1.html"></a>
+                <a href="./index.html"></a>
                 <a href="./flood_2.html"></a>
                 <a href="./air_3.html"></a>
                 <p class="p2">아이들에겐 바로 오늘 도움이 필요합니다.</p>
@@ -96,7 +96,7 @@
                         특히, 미세먼지로 매일 5세 미만 어린이 2,000여 명이 목숨을 잃습니다.
                     </p>
                     <p class="s2_p3"> 출처: WHO(World Health Organization) 2014 </p>
-                    <div class="s3_img2">
+                    <div class="s2_img2">
                         <dl>
                             <dt>집 안</dt>
                             <dd>
@@ -110,7 +110,7 @@
                             </dd>
                         </dl>
                     </div>
-                    <div class="s3_img3">
+                    <div class="s2_img3">
                         <dl>
                             <dt>집 밖</dt>
                             <dd>
@@ -219,10 +219,19 @@
                 <div class="s6_img0">
                     <p class="s6_p1">유니세프는 아이들 편입니다.</p>
                 </div>
-                <img src="./img/air_3/main_banner06_1.jpg">
-                <img src="./img/air_3/main_banner06_2.jpg">
-                <img src="./img/air_3/main_banner06_3.jpg">
-                <img src="./img/air_3/main_banner06_4.jpg">
+                <div class="s6">
+                    <div class="s6_slide">
+                        <figure>
+                        <img src="./img/air_3/main_banner06_1.jpg">
+                        <img src="./img/air_3/main_banner06_2.jpg">
+                        <img src="./img/air_3/main_banner06_3.jpg">
+                        <img src="./img/air_3/main_banner06_4.jpg">
+                        </figure>
+                    </div>
+                    <div class="s6_btn">
+                        <button>prev</button>
+                        <button>next</button>
+                    </div>
             </div>
             <div class="s6_img_p">
                 <div class="s6_img1">
@@ -301,6 +310,170 @@
         </section>
     </main>
 
+
+    <style>
+        .menu{
+            margin: 0
+        }
+        .menu nav{
+            border: 1px solid #000;
+            background:#fff;
+            color: #555;
+            padding:10px 0 5px 5px;
+            position:fixed; 
+            right:0; top: 6%;
+            transform:translateX(100%);
+            transition:.5s;
+        }
+        .menu nav.active{
+            right: 3%;
+            transform:translateX(0%);
+        }
+        .menu nav .p1{
+            margin: 0;
+            font-size: 0.8rem;
+            font-weight: bold;
+            color: #424242;
+            padding-top: 8px;
+            height: 27px;
+            line-height: 27px;
+            padding-left: 18px;
+            background: url(./img/drough_1/menuTit_bgL.gif) no-repeat left 19px;
+        }
+        .menu nav .p2{
+            margin: 0;
+            display: block;
+            font-size: 0.7rem;
+            font-weight: bold;
+            color: #807f7f;
+            padding-top: 5px;
+            text-align: right;
+            margin-right: 5px;
+            margin-left: 5px;
+        }
+        .menu nav a{
+            display: block;
+            width: 424px;
+            height: 170px;
+            padding: 3px;
+        }
+        .menu nav a:nth-of-type(1){
+            cursor: pointer;
+            pointer-events: auto;
+            background: url("./img/drough_1/menu01_selected.png") no-repeat 0 0;
+        }
+        .menu nav a:nth-of-type(2){
+            cursor: pointer;
+            pointer-events: auto;
+            background: url("./img/drough_1/menu02_off.png") no-repeat 0 0;
+        }
+        .menu nav a:nth-of-type(2):hover{
+            background: url("./img/drough_1/menu02_hover.png") no-repeat 0 0;
+        }
+        .menu nav a:nth-of-type(3){
+            cursor: pointer;
+            pointer-events: auto;
+            background: url("./img/drough_1/menu03_off.png") no-repeat 0 0;
+        }
+        .menu nav a:nth-of-type(3):hover{
+            background: url("./img/drough_1/menu03_hover.png") no-repeat 0 0;
+        }
+    
+    .menu-trigger,
+    .menu-trigger span {
+        display: inline-block;
+        transition: all .4s;
+        box-sizing: border-box;
+        cursor: pointer;
+        pointer-events: auto;
+    }
+    
+    .menu-trigger {
+        position: fixed;
+        right:55px; top:65px;
+        z-index:2;
+    
+        width: 50px;
+        height: 44px;
+    }
+    
+    .menu-trigger span {
+        position: absolute;
+        left: 0;
+        width: 60%;
+        height: 3px;
+        background-color: #fff;
+        border-radius: 4px;
+    }
+    
+    .menu-trigger span:nth-of-type(1) {
+        top: 0;
+    }
+    
+    .menu-trigger span:nth-of-type(2) {
+        top: 10px;
+    }
+    
+    .menu-trigger span:nth-of-type(3) {
+        bottom: 20px;
+    }
+    
+    .menu-trigger.type7 span:nth-of-type(1) {
+        -webkit-animation : menu-bar07-01 .75s forwards;
+        animation : menu-bar07-01 .75s forwards;
+    }
+    
+    @keyframes menu-bar07-02 {
+        0% {
+            transform : translateY(-10px) rotate(-45deg);
+        }
+        50% {
+            transform : translateY(-10px) rotate(0);
+        }
+        100% {
+            transform : translateY(0) rotate(0);
+        }
+    }
+    .menu-trigger.active-7 span{
+        background:#555;
+    }
+    .menu-trigger.active-7 span:nth-of-type(1) {
+        -webkit-animation : active-menu-bar07-01 .75s forwards;
+        animation : active-menu-bar07-01 .75s forwards;
+    }
+    
+    @keyframes active-menu-bar07-01 {
+        0% {
+            transform : translateY(0) rotate(0);
+        }
+        50% {
+            transform : translateY(10px) rotate(0);
+        }
+        100% {
+            transform : translateY(10px) rotate(45deg);
+        }
+    }
+    .menu-trigger.active-7 span:nth-of-type(2) {
+        opacity : 0;
+    }
+    .menu-trigger.active-7 span:nth-of-type(3) {
+        -webkit-animation : active-menu-bar07-02 .75s forwards;
+        animation : active-menu-bar07-02 .75s forwards;
+    }
+    
+    @keyframes active-menu-bar07-02 {
+        0% {
+            transform : translateY(0) rotate(0);
+        }
+        50% {
+            transform : translateY(-10px) rotate(0);
+        }
+        100% {
+            transform : translateY(-10px) rotate(-45deg);
+        }
+    }
+    
+    </style>
 
 </body>
 </html>
