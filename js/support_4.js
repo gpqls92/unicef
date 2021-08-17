@@ -10,7 +10,7 @@ window.addEventListener('DOMContentLoaded',function(){
         save1.onclick = function(e){
             e.preventDefault();
             if(!agree.checked || !poll.checked){
-                alert('약관동의 및 개인정보동의를 체크해 주세요.');
+                alert('작성 및 체크해 주세요.');
                 return;
             }
             join.action = '1_drough.html';

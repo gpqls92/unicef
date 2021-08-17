@@ -34,13 +34,15 @@ body .last_button #save1, body #save2 {
 }
 
 body .last_button #save1:nth-of-type(1) {
-  background-color: #00aeef;
+  border: 1px solid #00aeef;
+  background-color: #009fda;
   color: #fff;
 }
 
 body .last_button #save2:nth-of-type(2) {
+  border: 1px solid #c0c0c0;
   background-color: #fff;
-  color: #888;
+  color: #4a4a4a;
 }
 
 body .donation_top {
@@ -189,5 +191,24 @@ body .yes ul li div {
   background-color: blanchedalmond;
   overflow-y: scroll;
   display: none;
+}
+
+body footer {
+  background-color: #f1efef;
+  margin: 0;
+  padding: 2% 10%;
+  text-align: center;
+}
+
+body footer .info .menu {
+  padding: 0 0 15px 0;
+}
+
+body footer .info .menu a {
+  margin: 0 5px;
+  text-decoration: none;
+  font-weight: bold;
+  color: #555;
+  font-size: 1rem;
 }
 /*# sourceMappingURL=support_4.css.map */
