@@ -35,20 +35,22 @@
         </div>
         <ul class="table">
                 <h2><img src="./img/support_4/Ellipse_1.png" alt="표시점"> 후원인 정보를 입력해주세요. </h2>
-                <li> <label>후원인 구분</label>  
-                    <span><input type="radio" name="BASIC" class="checked" checked>개인</span>  
-                    <span><input type="radio" name="BASIC" class="checked">법인</span>            
-                    <span><input type="radio" name="BASIC" class="checked">학교 및 단체</span>             
+                <li class="gr"> 
+                    <label>후원인 구분</label>  
+                    <input type="radio" name="BASIC" class="checked" checked><span>개인</span>  
+                    <input type="radio" name="BASIC" class="checked"><span>법인</span>            
+                    <input type="radio" name="BASIC" class="checked"><span>학교 및 단체</span>             
                 </li>
-                <li> <label>성명</label> 
+                <li class="per1"> 
+                    <label>성명</label> 
                     <input type="text" name="name" placesholder="이름" required>
                 </li>
-                <li>
+                <li class="per2">
                     <label>주민등록번호</label>
                     <div class="person_num">
                         <input id="person_num01" type="text" name="p_jnum1" class="numOnly jumin" 
                         value title="주민등록 앞자리 입력" maxlength="6" onkeyup="nextFocus(this,p_jnum2);" num fname="주민등록번호" required>
-                        -
+                        &nbsp-&nbsp
                         <input id="person_num02" type="password" name="p_jnum2" class="numOnly jumin" 
                         value title="주민등록 뒷자리 입력" maxlength="7" num fname="주민등록번호" required>
                     </div>
@@ -69,12 +71,14 @@
                         </p>
                     </div>
                 </li>
-                <li>
+                <li class="per3">
                     <label>생년월일</label>
-                    <span>
-                        법령에 따라 만 14세 미만 아동 여부를 확인하기 위하여 후원자 본인의 생년월일을 입력하여 주세요.
-                    </span>
                     <div class="newsCheck">
+                        <span>
+                        * 법령에 따라 만 14세 미만 아동 여부를 확인하기 위하여 후원자 본인의 생년월일을 입력하여 주세요.
+                        </span>
+                        <br>
+                        <br>
                         <select name="year_select" id="year_select" class="select" fname="생년월일(년)" req>
                             <option value>-선택-</option>
                             <option value="2020">2020년대생</option>
@@ -145,18 +149,18 @@
                         일
                     </div>
                 </li>
-                <li>
+                <li class="per4">
                     <label>휴대폰번호</label>
                     <input type="text" name="p_tel1" class="numOnly" value title="휴대폰 앞 번호 입력" 
                     maxlength="3" onkeyup="nextFocus(this,p_tel2);" num fname="휴대폰번호" required>
-                    -
+                    &nbsp-&nbsp
                     <input type="text" name="p_tel2" class="numOnly" value title="휴대폰 가운데 번호 입력" 
                     maxlength="4" onkeyup="nextFocus(this,p_tel3);" num fname="휴대폰번호" required>
-                    -
+                    &nbsp-&nbsp  
                     <input type="text" name="p_tel3" class="numOnly" value title="휴대폰 마지막 번호 입력" 
                     maxlength="4" num fname="휴대폰번호" required>
                 </li>
-                <li>
+                <li class="per5">
                     <label>이메일</label>
                     <div class="email_indet">
                         <input id="mail01" type="text" name="p_email1" value title="이메일 아이디 입력" 
@@ -166,26 +170,28 @@
                         maxlength="30" fname="이메일" required>
                     </div>
                 </li>
-                <li>
+                <li class="per6">
                     <label>주소</label>
                     <div class="add_post">
                         <input id="zipcode1" type="text" name="zipcode1" class="numOnly" value title="우편번호" 
-                        maxlength="5" readonly num fname="우편번호" required>
+                        maxlength="5" style="width: 80px;"  required>
                         <a class="btn_style01_layer" onclick="showDaumPostcode('donation')">
                             우편번호 찾기
                         </a>
                         <div class="add_indent">
+                            <br>
                             <input type="text" name="address1" id="address1" value title="주소" maxlength="100"
-                            readonly fname="주소" style="width: 450px;" required>
+                            style="width: 450px;" placeholder="주소" required>
                             <br>
                             <br>
                             <input type="text" name="address2" id="address2" value title="상세주소" maxlength="100"
-                            readonly fname="상세주소" style="width: 450px;" required>
+                            style="width: 450px;" placeholder="상세주소" required>
                         </div>
                         </div>
                     </div>
                 </li>
-                <li> <label>후원동기</label> 
+                <li class="per7"> 
+                    <label>후원동기</label> 
                     <select name="motive" title="후원동기 선택" style="width: 133px;" fname="후원동기" required>
                         <option value>-선택-</option>
                         <option value="DO01">인터넷</option>
@@ -203,7 +209,8 @@
                         <option value="DO013">기타</option>
                     </select>
                 </li>
-                <div class="agreement"><label>수신동의[선택]</label>
+                <div class="agreement">
+                    <label>수신동의[선택]</label>
                     <li><label>소식지</label> 
                         <input id="dm_post" type="radio" name="MAIL_NEWS_WEBZ"
                         value="CI01" title="우편 선택" fname="소식지" checked required>
@@ -248,23 +255,22 @@
                         value="AD02" title="수신거부 선택" fname="제휴후원 광고" required>
                         <span for="adv_no">수신거부</span> 
                     </li>
-                    <fieldset class="minibox">
-                        * 위의 광고성 정보 수신 동의를 거부할 권리가 있으나, 동의를 거부할 경우 다양한 제휴후원 광고를 받으실 수 없습니다.<br>
+                    <li class="minibox">
+                        <fieldset>
+                        * 위의 광고성 정보 수신 동의를 거부할 권리가 있으나, 동의를 거부할 경우 다양한<br>&nbsp 제휴후원 광고를 받으실 수 없습니다.<br>
                         * 공지사항 및 회원관리 안내는 수신 여부와 관계없이 발송됩니다.<br>
                         * 동의 내용은 언제든지 홈페이지 또는 고객센터를 통해 변경이 가능합니다.<br>
-                    </fieldset>
+                        </fieldset>
+                    </li>
                 </div>
-
         </ul>
-
-
-
         <div class="yes">
             <legend>약관 및 개인정보 수집·이용 동의
             <input type="checkbox" id="all"> 모두 동의합니다 </legend>
     
             <ul>
                 <li> <input type="checkbox" id="agree"> 후원 약관 동의 [필수]
+                    <span>상세보기 [+]</span> 
                     <div>제 1조 약관의 목적
                         이 이용약관(이하 '약관') 사회복지시설정보시스템이 후원회원에게 제공하는 서비스의 내용과 당사자의 권리 의무 및 책임사항을 규정하는 것을 목적으로 합니다
                         <br>
@@ -348,7 +354,8 @@
                         본 약관은 2013년 2월 17일부터 적용되며, 2007년 7월 23일부터 적용되던 종전의 약관을 대체하게 됩니다.
                     </div>
                 </li>
-                <li> <input type="checkbox" id="poll"> 개인정보 수집·이용 동의 [필수] 
+                <li> <input type="checkbox" id="poll"> 개인정보 수집·이용 동의 [필수]
+                    <span>상세보기 [+]</span> 
                     <div>개인정보의 수집·이용
                         <br>
                         개인정보처리자는 다음의 어느 하나에 해당하는 경우에는 개인정보를 수집할 수 있으며 그 수집 목적의 범위에서 이용할 수 있습니다(「개인정보 보호법」 제15조제1항).

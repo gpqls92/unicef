@@ -8,28 +8,8 @@ body{
         width:50%; 
         margin: 20px auto 100px;
         border: 2px solid #dedede;
-    }
-        .last_button #save1, #save2{
-            margin: 3% 5px 10%;
-            position: relative;
-            left: 75%;
-            line-height: 38px;
-            text-align: center;
-            height: 38px;
-            width: 80px;
-            border: 1px solid #888;
-            font-weight: bold;
-        }
-        .last_button #save1:nth-of-type(1){
-            border: 1px solid #00aeef;
-            background-color: #009fda;
-            color: #fff;
-        }
-        .last_button #save2:nth-of-type(2){
-            border: 1px solid #c0c0c0;
-            background-color: #fff;
-            color: #4a4a4a;
-        }
+    
+
             .donation_top{
                 position: relative;
                 margin: 0 auto;
@@ -44,122 +24,272 @@ body{
                     border: 1px solid #dedede;
                     transform: translate( 5%, -20%);
                 }
-                /* .second p{
-                    padding: 15px 0;
-                    font-weight: bold;
-                    border-bottom: 2px solid #000;
-                }
-                    .second p img{ 
-                        width: 13px;
-                        transform: translate(20%, 10%);
-                        border:none;
-                    } */
             .table{
                 padding: 0 5%;
                 width:70%; 
                 margin:0 auto 50px;
                 font-weight: bold;
-            }
-                .table h2 {
+            
+                h2 {
+                    margin: 0;
                     font-size: 1rem;
                     color: #000;
                     padding: 15px 0;
                     border-bottom: 2px solid #000;
-                }
-                    .table h2 img{
+                
+                    img{
                         width: 13px;
                         transform: translate(5%, 10%);
                     }
-                .table li {
-                    width: 100%;
-                    margin: 20px 0;
-                    display:flex;
-                    justify-content: space-between;
                 }
-                    .table li p{
-                        min-width:45%;
-                        margin: 15px 0;
-                    }
-                    .table li label{
+                li {
+                    vertical-align: middle;
+                    width: 100%;
+                    padding: 20px 0;
+                    display:flex;
+                    // justify-content: space-between;
+                    border-bottom: 1px solid #dedede;
+                    label{
                         text-align: left;
-                        width:30%;
+                        width:23%;
+                        height: 5%;
                         font-size: 0.85rem;
                         color: #000;
                     }
-                    .table li .checked{
-                        display: block;
-                        margin: 0;
-                        width: 20%;
-                        height: 15px;
-                    }
-                    .table li input{
-                        float: left;
-                        margin: 0;
-                        width:30%;
-                        height: 25px;
-                    }
-            .agreement{
-                margin: 0;
-                display:block;
-            }
-                .agreement label{
-                    position: relative;
-                    text-align: left;
-                    width:50%;
-                    font-size: 1rem;
+                }
+                .gr{
                     margin: 0;
-                }
-                .agreement li{
-                    padding: 10px 50px 0 150px;
-                    float: right;
-                    width: 70%;
-                    transform: translate(5%, 0);
-                }
-                .agreement li label{
-                    width:100%;
-                    height: 15px;
+                    label{
+                        margin: 0;
                     }
-                .agreement li input{
-                    margin: 10%;
-                    width:50%;
-                    height: 15px;
+                    span{
+                        margin-right: 5%;
+                    }
+                    
                 }
-            .minibox{
-                width: 100%;
-                padding: 3%;
+                .per1{
+                    margin: 0;
+                    input{
+                        height: 22px;
+                        width: 218px;
+                        border: 1px solid #c0c0c0;
+                    }
+                }
+                .per2{
+                    // display: block;
+                    margin: 0;
+                    input{
+                        // margin: 10%;
+                        height: 22px;
+                        width: 140px;
+                        border: 1px solid #c0c0c0;
+                    }
+                    .help{
+                        display: inline-block;
+                        position: relative;
+                        margin-left: 5px;
+                        padding-top: 3px;
+                        p{
+                            background: url('../img/support_4/bg_balloon.png') no-repeat 0 0;
+                            // display: none;
+                            color: #4a4a4a;
+                            font-size: 12px;
+                            line-height: 18px;
+                            position: absolute;
+                            top: -100px;
+                            right: -170px;
+                            padding-top: 15px;
+                            padding-left: 10px;
+                            height: 77px;
+                            width: 351px;
+                            z-index: 100;
+                            span{
+                                color: #00adee;
+                            }
+                        }
+                    }
+                }
+                .per3{
+                    margin: 0;
+                    padding-top: 10px;
+                    padding-bottom: 10px;
+                    color: #777;
+                    span{
+                        
+                        margin: 0;
+                        font-size: 0.7rem;
+                        color: #797979;
+                    }
+                    .newsCheck{
+                        
+                        select{
+                            
+                            border: 1px solid #c0c0c0;
+                            margin: 0;
+                            // margin-left: 50px;
+                            width: 80px;
+                            height: 23px;
+                            // line-height: 23px;
+                            color: #777;
+                        }
+                    }
+                }
+                .per4{
+                    input{
+                        height: 22px;
+                        width: 65px;
+                        border: 1px solid #c0c0c0;
+                    }
+                }
+                .per5{
+                    color: #777;
+                    input{
+                        height: 22px;
+                        width: 140px;
+                        border: 1px solid #c0c0c0;
+                    }
+                }
+                .per6{
+                    input{
+                        height: 22px;
+                        border: 1px solid #c0c0c0;
+                    }
+                    a{
+                        border: 1px solid #c0c0c0;
+                        color: #4a4a4a;
+                        display: inline-block;
+                        font-size: 12px;
+                        height: 22px;
+                        line-height: 21px;
+                        padding-left: 10px;
+                        padding-right: 10px;
+                        background-color: #f8f8f8;
+                        cursor: pointer;
+                        font-weight: bold;
+                        text-align: center;
+                    }
+                }
+                .per7{
+
+                    select{
+                        color: #777;
+                        height: 23px;
+                        line-height: 23px;
+                        padding-left: 5px;
+                        vertical-align: middle;
+                        border: 1px solid #c0c0c0;
+                    }
+                }
+                .agreement{
+                    margin: 5% 0 0 0;
+                    padding: 0;
+                    display:block;
+                    label{
+                        margin: 0;
+                        vertical-align: middle;
+                        display:flex;
+                        text-align: left;
+                        width:23%;
+                        height: 5%;
+                        font-size: 0.85rem;
+                        color: #000;
+                    }
+                    li{
+                        margin: 0;
+                        border: none;
+                        padding: 10px 50px 0 150px;
+                        // float: right;
+                        width: 80%;
+                        label{
+                            color: #3a3a3a;
+                        }
+                        span{
+                            padding-right: 6%;
+                        }
+                        .minibox{
+                            border-color:#c0c0c0;
+                        }
+                        fieldset{
+                            width: 470px;
+                            font-size: 12px;
+                            margin: 10px 0 0;
+                            padding: 10px 0px 10px 18px;
+
+                        }
+                    }
+                }
             }
                 
-
-
-
-
-
-
-
-    .yes{width: 70%; margin: 50px auto;
-        ul{
-            list-style-type: none;
-            padding: 0;
-            li{
-                border: 1px solid #888;
-                padding: 20px;
-                position: relative;
-                ::after{
-                    content: '';
-                    background: url('./img/support_4/see.png');
-                    width: 90px; height: 15px;
-                    position: absolute;
-                    right: 50px; top:40%;
-                    cursor: pointer;
-                }
-                div{
-                    margin: 2% 1%;
-                    height: 150px;
+        .yes{
+            width: 70%; 
+            margin: 0 auto 50px;
+            border-top: 1px solid #c0c0c0;
+            border-bottom: 1px solid #c0c0c0;
+            padding-top: 3%;
+            font-weight: bold;
+            color: #000;
+            legend{
+                margin-bottom: 5%;
+            }
+            ul{
+                list-style-type: none;
+                padding: 0;
+                li{
+                    border: 1px solid #888;
                     padding: 20px;
-                    background-color: blanchedalmond;
-                    overflow-y: scroll;
-                    display: none;
+                    position: relative;
+                    span{
+                        content: '';
+                        // width: 90px; height: 15px;
+                        position: absolute;
+                        right: 50px; top:40%;
+                        cursor: pointer;
+                    }
+                    
+                    div{
+                        margin: 2% 1%;
+                        height: 150px;
+                        padding: 20px;
+                        background-color: blanchedalmond;
+                        overflow-y: scroll;
+                        display: none;
+                    }
                 }
+            }
+        }
+        .last_button{
+            overflow: hidden;
+            text-align: right;
+            padding: 10px;
+            margin: 0;
+            padding: 1% 15% 8%;
+            border: 0;
+            font-size: 100%;
+            vertical-align: baseline;
+            color: inherit;
+            #save1{
+                background-color: #00aeef;
+                color: #fff;
+                font-weight: bold;
+                display: inline-block;
+                border: 1px solid #009fda;
+                line-height: 38px;
+                text-align: center;
+                height: 38px;
+                width: 78px;
+                text-decoration: none;
+            }
+            #save2{
+                background-color: #fff;
+                color: #4a4a4a;
+                font-weight: bold;
+                display: inline-block;
+                border: 1px solid #c0c0c0;
+                line-height: 38px;
+                text-align: center;
+                height: 38px;
+                width: 78px;
+                text-decoration: none;
             }
         }
     }
