@@ -100,6 +100,22 @@ body .full .table .per2 input {
   border: 1px solid #c0c0c0;
 }
 
+body .full .table .per2 button {
+  margin: 0 1%;
+  border: 1px solid #c0c0c0;
+  color: #4a4a4a;
+  display: inline-block;
+  font-size: 12px;
+  height: 22px;
+  line-height: 21px;
+  padding-left: 10px;
+  padding-right: 10px;
+  background-color: #f8f8f8;
+  cursor: pointer;
+  font-weight: bold;
+  text-align: center;
+}
+
 body .full .table .per2 .help {
   display: inline-block;
   position: relative;
@@ -113,7 +129,7 @@ body .full .table .per2 .help p {
   font-size: 12px;
   line-height: 18px;
   position: absolute;
-  top: -100px;
+  top: -105px;
   right: -170px;
   padding-top: 15px;
   padding-left: 10px;
@@ -128,8 +144,6 @@ body .full .table .per2 .help p span {
 
 body .full .table .per3 {
   margin: 0;
-  padding-top: 10px;
-  padding-bottom: 10px;
   color: #777;
 }
 
@@ -168,7 +182,7 @@ body .full .table .per6 input {
   border: 1px solid #c0c0c0;
 }
 
-body .full .table .per6 a {
+body .full .table .per6 a input {
   border: 1px solid #c0c0c0;
   color: #4a4a4a;
   display: inline-block;
@@ -260,11 +274,13 @@ body .full .yes ul li {
   position: relative;
 }
 
-body .full .yes ul li span {
-  content: '';
-  position: absolute;
-  right: 50px;
-  top: 40%;
+body .full .yes ul li .sp1 {
+  padding-left: 59.46%;
+  cursor: pointer;
+}
+
+body .full .yes ul li .sp2 {
+  padding-left: 50%;
   cursor: pointer;
 }
 
@@ -272,7 +288,8 @@ body .full .yes ul li div {
   margin: 2% 1%;
   height: 150px;
   padding: 20px;
-  background-color: blanchedalmond;
+  background-color: #ceeef8;
+  font-weight: lighter;
   overflow-y: scroll;
   display: none;
 }

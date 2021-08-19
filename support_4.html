@@ -6,15 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <meta property="og:title" content="unicef campaign">
-    <meta property="og:url" content="https://gpqls92.github.io/-project1-corto-oil-/">
-    <meta property="og:image" content="img/food_img.jpg">
-    <meta property="og:description" content="Say hello to fresh extra virgin olive oil.">
+    <meta property="og:url" content="https://gpqls92.github.io/unicef/support_4.html">
+    <meta property="og:image" content="./img/support_4/logo_img06.png">
+    <meta property="og:description" content="기후변화로 고통받는 아이들에겐 바로 오늘 도움이 필요합니다.">
     
     <meta name="twitter:card" content="summary">
     <meta name="twitter:title" content="unicef campaign">
-    <meta name="twitter:url" content="https://gpqls92.github.io/-project1-corto-oil-/">
-    <meta name="twitter:image" content="img/food_img.jpg">
-    <meta name="twitter:description" content="Say hello to fresh extra virgin olive oil.">
+    <meta name="twitter:url" content="https://gpqls92.github.io/unicef/support_4.html">
+    <meta name="twitter:image" content="./img/support_4/logo_img06.png">
+    <meta name="twitter:description" content="기후변화로 고통받는 아이들에겐 바로 오늘 도움이 필요합니다.">
     <title>[유니세프 기후변화 캠페인]후원</title>
 
     <link rel="shortcut icon" href="img/logo/16X16.png">
@@ -54,6 +54,7 @@
                         <input id="person_num02" type="password" name="p_jnum2" class="numOnly jumin" 
                         value title="주민등록 뒷자리 입력" maxlength="7" num fname="주민등록번호" required>
                     </div>
+                    <button>주민번호체크</button>
                     <div class="help">
                         <strong>
                             <img src="./img/support_4/bullet_question.png" alt="도움말 보기">
@@ -173,19 +174,18 @@
                 <li class="per6">
                     <label>주소</label>
                     <div class="add_post">
-                        <input id="zipcode1" type="text" name="zipcode1" class="numOnly" value title="우편번호" 
+                        <input id="sample6_postcode" type="text" name="zipcode1" class="numOnly" value title="우편번호" 
                         maxlength="5" style="width: 80px;"  required>
-                        <a class="btn_style01_layer" onclick="showDaumPostcode('donation')">
-                            우편번호 찾기
-                        </a>
+                        <a><input type="button" onclick="sample6_execDaumPostcode()" value="우편번호 찾기"></a><br>
                         <div class="add_indent">
                             <br>
-                            <input type="text" name="address1" id="address1" value title="주소" maxlength="100"
+                            <input type="text" name="address1" id="sample6_address" value title="주소" maxlength="100"
                             style="width: 450px;" placeholder="주소" required>
                             <br>
                             <br>
-                            <input type="text" name="address2" id="address2" value title="상세주소" maxlength="100"
-                            style="width: 450px;" placeholder="상세주소" required>
+                            <input type="text" name="address2" id="sample6_detailAddress" value title="상세주소" maxlength="100"
+                            style="width: 270px;" placeholder="상세주소" required>
+                            <input type="text" id="sample6_extraAddress" style="width: 170px;" placeholder="참고항목">
                         </div>
                         </div>
                     </div>
@@ -267,11 +267,11 @@
         <div class="yes">
             <legend>약관 및 개인정보 수집·이용 동의
             <input type="checkbox" id="all"> 모두 동의합니다 </legend>
-    
+            <div class="see">
             <ul>
                 <li> <input type="checkbox" id="agree"> 후원 약관 동의 [필수]
-                    <span>상세보기 [+]</span> 
-                    <div>제 1조 약관의 목적
+                    <span class="sp1">- 상세보기 -</span> 
+                    <div class="ac1">제 1조 약관의 목적
                         이 이용약관(이하 '약관') 사회복지시설정보시스템이 후원회원에게 제공하는 서비스의 내용과 당사자의 권리 의무 및 책임사항을 규정하는 것을 목적으로 합니다
                         <br>
                         제 2조 용어의 정의
@@ -355,7 +355,7 @@
                     </div>
                 </li>
                 <li> <input type="checkbox" id="poll"> 개인정보 수집·이용 동의 [필수]
-                    <span>상세보기 [+]</span> 
+                    <span class="sp2">- 상세보기 -</span> 
                     <div>개인정보의 수집·이용
                         <br>
                         개인정보처리자는 다음의 어느 하나에 해당하는 경우에는 개인정보를 수집할 수 있으며 그 수집 목적의 범위에서 이용할 수 있습니다(「개인정보 보호법」 제15조제1항).
@@ -462,10 +462,66 @@
                     <br>
             </ul>
         </div>
-        <div class="last_button">    
-            <a class="step_next" id="save1" href="#" onclick="formSubmit(2); return false;">다음단계</a>
-            <a class="step_cancel" id="save2" href="#" onclick="ga('send','event','button', 'click','2.후원자정보입력(취소)'); doCancel(); return false;">취소하기</a>
-        </div>
+    </div>
+    <div class="last_button">    
+        <a class="step_next" id="save1" href="#" onclick="formSubmit(2); return false;">다음단계</a>
+        <a class="step_cancel" id="save2" href="index.html" onclick="ga('send','event','button', 'click','2.후원자정보입력(취소)'); doCancel(); return false;">취소하기</a>
+    </div>
+
+
+
+
+
+<script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
+<script>
+    function sample6_execDaumPostcode() {
+        new daum.Postcode({
+            oncomplete: function(data) {
+                // 팝업에서 검색결과 항목을 클릭했을때 실행할 코드를 작성하는 부분.
+
+                // 각 주소의 노출 규칙에 따라 주소를 조합한다.
+                // 내려오는 변수가 값이 없는 경우엔 공백('')값을 가지므로, 이를 참고하여 분기 한다.
+                var addr = ''; // 주소 변수
+                var extraAddr = ''; // 참고항목 변수
+
+                //사용자가 선택한 주소 타입에 따라 해당 주소 값을 가져온다.
+                if (data.userSelectedType === 'R') { // 사용자가 도로명 주소를 선택했을 경우
+                    addr = data.roadAddress;
+                } else { // 사용자가 지번 주소를 선택했을 경우(J)
+                    addr = data.jibunAddress;
+                }
+
+                // 사용자가 선택한 주소가 도로명 타입일때 참고항목을 조합한다.
+                if(data.userSelectedType === 'R'){
+                    // 법정동명이 있을 경우 추가한다. (법정리는 제외)
+                    // 법정동의 경우 마지막 문자가 "동/로/가"로 끝난다.
+                    if(data.bname !== '' && /[동|로|가]$/g.test(data.bname)){
+                        extraAddr += data.bname;
+                    }
+                    // 건물명이 있고, 공동주택일 경우 추가한다.
+                    if(data.buildingName !== '' && data.apartment === 'Y'){
+                        extraAddr += (extraAddr !== '' ? ', ' + data.buildingName : data.buildingName);
+                    }
+                    // 표시할 참고항목이 있을 경우, 괄호까지 추가한 최종 문자열을 만든다.
+                    if(extraAddr !== ''){
+                        extraAddr = ' (' + extraAddr + ')';
+                    }
+                    // 조합된 참고항목을 해당 필드에 넣는다.
+                    document.getElementById("sample6_extraAddress").value = extraAddr;
+                
+                } else {
+                    document.getElementById("sample6_extraAddress").value = '';
+                }
+
+                // 우편번호와 주소 정보를 해당 필드에 넣는다.
+                document.getElementById('sample6_postcode').value = data.zonecode;
+                document.getElementById("sample6_address").value = addr;
+                // 커서를 상세주소 필드로 이동한다.
+                document.getElementById("sample6_detailAddress").focus();
+            }
+        }).open();
+    }
+</script>
     
 </fieldset>
 
