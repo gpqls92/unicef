@@ -81,23 +81,50 @@ body .fix .left_under .earth_3 {
 }
 
 body .fix .support {
-  padding: 10px 0 0 0;
-  left: 83%;
-  bottom: 6%;
   position: absolute;
-  letter-spacing: 5px;
-  font-size: 1rem;
-  font-weight: bold;
-  width: 15%;
-  height: 5%;
-  text-align: center;
-  background: url("../img/flood_2/btn_bg01.png") no-repeat center bottom;
+  bottom: 6%;
+  left: 85%;
+  width: 187px;
+  height: 50px;
+  line-height: 50px;
+  pointer-events: auto;
+  background: url("../img/drough_1/btn_bg01.png") no-repeat center bottom;
+}
+
+body .fix .support .ani_b_to_u {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 0px;
+  margin: 3px;
+}
+
+body .fix .support :hover {
+  background-color: rgba(206, 205, 205, 0.4);
+  color: #fff;
+  -webkit-transition: 1s;
+  transition: 1s;
 }
 
 body .fix .support a {
-  color: #fefffd;
   text-decoration: none;
-  pointer-events: auto;
+  display: inline-block;
+  position: relative;
+  color: #fff;
+  border: 0;
+  background-image: url(../img/support_4/1px_white.gif);
+  background-repeat: no-repeat;
+  background-size: 100% 0%;
+  background-position: center bottom;
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease;
+  font-size: 17px;
+  line-height: 50px;
+  width: 187px;
+  height: 50px;
+  text-align: center;
+  letter-spacing: 3px;
+  font-weight: bold;
 }
 
 body main section {
