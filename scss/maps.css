@@ -1,0 +1,83 @@
+body {
+  margin: 0;
+  font-size: 12px;
+  color: #555;
+  list-style: none;
+  border-color: #777;
+}
+
+body .fix {
+  padding: 0 10%;
+  width: 80%;
+  margin: 0;
+}
+
+body .fix .fix1 {
+  margin: 32px;
+  width: 80%;
+}
+
+body .fix .logo {
+  width: 100%;
+  height: auto;
+  position: relative;
+  /* margin-bottom: 30px; */
+  border-bottom: 2px solid #01adef;
+}
+
+body .common {
+  margin: 0;
+  margin-bottom: 5%;
+  width: 80%;
+  padding: 0 18%;
+}
+
+body .common .hear {
+  font-weight: bold;
+  font-size: 15px;
+  margin-bottom: 15px;
+}
+
+body .common .hear img {
+  width: 11px;
+}
+
+body .board {
+  width: 80%;
+  margin: 5px 0;
+}
+
+body .board th, body .board td {
+  text-align: center;
+  padding: 10px;
+  border: 1px solid #c0c0c0;
+  border-width: 1px 0 1px;
+}
+
+body .board tbody th {
+  background: #eee;
+}
+
+body .board tbody td:nth-child(2) {
+  text-align: left;
+}
+
+body footer {
+  background-color: #f1efef;
+  margin: 0;
+  padding: 2% 10%;
+  text-align: center;
+}
+
+body footer .info .menu {
+  padding: 0 0 15px 0;
+}
+
+body footer .info .menu a {
+  margin: 0 5px;
+  text-decoration: none;
+  font-weight: bold;
+  color: #555;
+  font-size: 1rem;
+}
+/*# sourceMappingURL=maps.css.map */
