@@ -1,5 +1,4 @@
-// @import '_common.scss';
-// @import '_mixin.scss';
+@charset "utf-8";
 
 body{ 
     overflow: hidden; 
@@ -692,3 +691,6 @@ body{
             }  
         }     
 }
+
+@media (max-width:768px){}
+@media (min-width:769px) and (max-width:1440px){}

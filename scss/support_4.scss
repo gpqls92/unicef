@@ -1,3 +1,5 @@
+@charset "utf-8";
+
 body{ 
     margin: 0; 
     font-size: 14px;
@@ -325,3 +327,7 @@ body{
     }
 
 }
+
+
+@media (max-width:768px){}
+@media (min-width:769px) and (max-width:1440px){}

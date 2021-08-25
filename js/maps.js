@@ -75,6 +75,31 @@ window.addEventListener('DOMContentLoaded',function(){
             map.setCenter(coords);
         } 
     });    
-   
+    
+
+
+    let cvs =document.createElement('canvas');
+                cvs.width = window.innerWidth;
+                cvs.height = window.innerHeight;
+                cvs.id = 'cvs';
+                cvs.append('지원하지 않는 브라우저입니다.');
+                document.body.append(cvs);
+        
+                let ctx = cvs.getContext('2d');
+                
+                function cursor(x, y){
+                    ctx.clearRect(0,0,cvs.width, cvs.height)
+                    ctx.beginPath();
+                    ctx.lineWidth = 5;
+                    ctx.strokeStyle = "#01adef";
+                    // ctx.globalAlpha = 0.8;
+                    ctx.arc(x,y,6,0, Math.PI*2, false); 
+                    ctx.stroke();
+                }
+                
+                window.addEventListener('mousemove', function (e){
+                    cursor(e.clientX, e.clientY);
+                })
+
 
 });
