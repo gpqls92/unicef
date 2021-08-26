@@ -37,13 +37,13 @@
                 <h2><img src="./img/support_4/Ellipse_1.png" alt="표시점"> 후원인 정보를 입력해주세요. </h2>
                 <li class="gr"> 
                     <label>후원인 구분</label>  
-                    <input type="radio" name="BASIC" class="checked" checked><span>개인</span>  
-                    <input type="radio" name="BASIC" class="checked"><span>법인</span>            
-                    <input type="radio" name="BASIC" class="checked"><span>학교 및 단체</span>             
+                    <input type="radio" name="BASIC" class="checked" title="후원인구분1" checked><span>개인</span>  
+                    <input type="radio" name="BASIC" class="checked" title="후원인구분2"><span>법인</span>            
+                    <input type="radio" name="BASIC" class="checked" title="후원인구분3"><span>학교 및 단체</span>             
                 </li>
                 <li class="per1"> 
                     <label>성명</label> 
-                    <input type="text" name="name" placesholder="이름" required>
+                    <input type="text" name="name" placesholder="이름" title="이름" required>
                 </li>
                 <li class="per2">
                     <label>주민등록번호</label>
@@ -80,7 +80,7 @@
                         </span>
                         <br>
                         <br>
-                        <select name="year_select" id="year_select" class="select" fname="생년월일(년)" req>
+                        <select name="year_select" id="year_select" class="select" fname="생년월일(년)" title="생년월일(년)" req>
                             <option value>-선택-</option>
                             <option value="2020">2020년대생</option>
                             <option value="2010">2010년대생</option>
@@ -97,7 +97,7 @@
                             <option value="1900">1900년대생</option>
                         </select>
                         년
-                        <select name="month_select" id="month_select" class="select" fname="생년월일(월)" req>
+                        <select name="month_select" id="month_select" class="select" fname="생년월일(월)" title="생년월일(월)" req>
                             <option value>-선택-</option>
                             <option value="1">1</option>
                             <option value="2">2</option>
@@ -113,7 +113,7 @@
                             <option value="12">12</option>
                         </select>
                         월
-                        <select name="day_select" id="day_select" class="select" fname="생년월일(일)" req>
+                        <select name="day_select" id="day_select" class="select" fname="생년월일(일)" title="생년월일(일)" req>
                             <option value>-선택-</option>
                             <option value="1">1</option>
                             <option value="2">2</option>
@@ -185,7 +185,7 @@
                             <br>
                             <input type="text" name="address2" id="sample6_detailAddress" value title="상세주소" maxlength="100"
                             style="width: 270px;" placeholder="상세주소" required>
-                            <input type="text" id="sample6_extraAddress" style="width: 170px;" placeholder="참고항목">
+                            <input type="text" id="sample6_extraAddress" style="width: 170px;" placeholder="참고항목" value title="참고항목">
                         </div>
                         </div>
                     </div>
@@ -212,30 +212,30 @@
                 <div class="agreement">
                     <label>수신동의[선택]</label>
                     <li><label>소식지</label> 
-                        <input id="dm_post" type="radio" name="MAIL_NEWS_WEBZ"
+                        <input id="dm_post1" type="radio" name="MAIL_NEWS_WEBZ"
                         value="CI01" title="우편 선택" fname="소식지" checked required>
                         <span for="dm_post">우편</span>
-                        <input id="dm_post" type="radio" name="MAIL_NEWS_WEBZ"
+                        <input id="dm_post2" type="radio" name="MAIL_NEWS_WEBZ"
                         value="CI02" title="이메일 선택" fname="소식지" required>
                         <span for="dm_email">이메일</span>           
-                        <input id="dm_post" type="radio" name="MAIL_NEWS_WEBZ"
+                        <input id="dm_post3" type="radio" name="MAIL_NEWS_WEBZ"
                         value="CI03" title="모두수신 선택" fname="소식지" required>
                         <span for="dm_all">모두수신</span>    
-                        <input id="dm_post" type="radio" name="MAIL_NEWS_WEBZ"
+                        <input id="dm_post4" type="radio" name="MAIL_NEWS_WEBZ"
                         value="CI04" title="수신거부 선택" fname="소식지" required>
                         <span for="dm_no">수신거부</span>         
                     </li>
                     <li> <label>연차보고서</label>
-                        <input id="annual_post" type="radio" name="MAIL_ANNUALREPORT"
+                        <input id="annual_post5" type="radio" name="MAIL_ANNUALREPORT"
                         value="CI01" title="우편 선택" fname="연차보고서" checked required>
                         <span for="dm_post">우편</span>
-                        <input id="annual_post" type="radio" name="MAIL_ANNUALREPORT"
+                        <input id="annual_post6" type="radio" name="MAIL_ANNUALREPORT"
                         value="CI02" title="이메일 선택" fname="연차보고서" required>
                         <span for="dm_email">이메일</span>
-                        <input id="annual_post" type="radio" name="MAIL_ANNUALREPORT"
+                        <input id="annual_post7" type="radio" name="MAIL_ANNUALREPORT"
                         value="CI03" title="모두수신 선택" fname="연차보고서" required>
                         <span for="dm_all">모두수신</span>
-                        <input id="annual_post" type="radio" name="MAIL_ANNUALREPORT"
+                        <input id="annual_post8" type="radio" name="MAIL_ANNUALREPORT"
                         value="CI04" title="수신거부 선택" fname="연차보고서" required>
                         <span for="dm_no">수신거부</span>
                     </li>
@@ -266,10 +266,10 @@
         </ul>
         <div class="yes">
             <legend>약관 및 개인정보 수집·이용 동의
-            <input type="checkbox" id="all"> 모두 동의합니다 </legend>
+            <input type="checkbox" id="all" title="모두 동의"> 모두 동의합니다 </legend>
             <div class="see">
             <ul>
-                <li> <input type="checkbox" id="agree"> 후원 약관 동의 [필수]
+                <li> <input type="checkbox" id="agree" title="후원동의"> 후원 약관 동의 [필수]
                     <span class="sp1">- 상세보기 -</span> 
                     <div class="ac1">제 1조 약관의 목적
                         이 이용약관(이하 '약관') 사회복지시설정보시스템이 후원회원에게 제공하는 서비스의 내용과 당사자의 권리 의무 및 책임사항을 규정하는 것을 목적으로 합니다
@@ -354,7 +354,7 @@
                         본 약관은 2013년 2월 17일부터 적용되며, 2007년 7월 23일부터 적용되던 종전의 약관을 대체하게 됩니다.
                     </div>
                 </li>
-                <li> <input type="checkbox" id="poll"> 개인정보 수집·이용 동의 [필수]
+                <li> <input type="checkbox" id="poll" title="정보동의"> 개인정보 수집·이용 동의 [필수]
                     <span class="sp2">- 상세보기 -</span> 
                     <div>개인정보의 수집·이용
                         <br>
